@@ -1,0 +1,15 @@
+# Lightweight deps for the dataset helpers and training-free validators only
+# (datasets/download.py, datasets/dataset.py, evaluation/{chess,cards,shapes}_validator.py).
+# These run in almost any environment.
+#
+# The three heavy codebases each have their own PINNED, per-environment file:
+#   DDPM-IP/requirements.txt          -> conda env "ADM"        (pixel-space DDPM-IP + VSM)
+#   latent-diffusion/requirements.txt -> conda env "diff_haul"  (Latent Diffusion + VSM)
+#   evaluation/requirements.txt       -> conda env "fld"        (FID / CLIP-FID / FLD metrics)
+
+numpy
+opencv-python
+pillow
+tqdm
+python-chess          # ChessImages legality checks (chess_validator.py)
+huggingface_hub       # dataset download (datasets/download.py)

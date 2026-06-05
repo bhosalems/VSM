@@ -1,0 +1,68 @@
+# ─────────────────────────────────────────────────────────────
+# VSM .gitignore
+# Track only code: the two main codebases (DDPM-IP, latent-diffusion),
+# the fld metric library, and the datasets/ + evaluation/ helpers.
+# Everything below (logs, checkpoints, generated samples, data) is ignored.
+# ─────────────────────────────────────────────────────────────
+
+# --- Logs & training run dirs ---
+log/
+logs/
+wandb/
+*.log
+*.err
+*.out
+debug.*
+job.*
+OPENAI_LOGDIR/
+
+# --- Checkpoints & model weights ---
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npz
+*.npy
+checkpoints/
+chkpts/
+chkpts_new/
+*.egg-info/
+build/
+
+# --- Datasets / downloaded data / generated samples ---
+/data/
+datasets/data/
+DDPM-IP/datasets/
+latent-diffusion/datasets/
+inference_*/
+samples/
+*_samples/
+data_gen*.zip
+*.zip
+
+# Keep the bundled chess templates used by the evaluator
+!evaluation/templates/
+!evaluation/templates/**
+
+# --- Notebooks & scratch ---
+*.ipynb
+rough.*
+temp/
+tmp/
+testtmp.py
+__MACOSX/
+
+# --- Python / env / editor ---
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+.vscode/
+.idea/
+.DS_Store
+
+# --- Large media (allow the README teaser) ---
+*.gif
+!assets/teaser.png

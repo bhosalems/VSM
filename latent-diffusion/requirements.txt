@@ -1,0 +1,65 @@
+# Python dependencies for the Latent Diffusion (LDM) + VSM codebase.
+# Conda env: diff_haul  (Python 3.9)
+#   conda env create -f latent-diffusion/environment.yaml
+#   conda activate diff_haul && pip install -r latent-diffusion/requirements.txt
+# Pinned from `pip list --format=freeze`. nvidia-*/triton are pulled in by torch.
+
+antlr4-python3-runtime==4.9.3
+certifi==2024.8.30
+charset-normalizer==3.3.2
+chess==1.11.2
+click==8.1.7
+contourpy==1.3.0
+cycler==0.12.1
+diffusers==0.30.3
+docker-pycreds==0.4.0
+filelock==3.16.1
+fonttools==4.53.1
+fsspec==2024.9.0
+gitdb==4.0.11
+GitPython==3.1.43
+huggingface-hub==0.25.1
+idna==3.8
+importlib_metadata==8.5.0
+importlib_resources==6.4.4
+joblib==1.4.2
+kiwisolver==1.4.7
+matplotlib==3.9.2
+# nms-1d-cpu  # local build, not on PyPI; optional 1D-NMS op (skip or build from source)
+numpy==1.26.4
+nvidia-cublas-cu11==11.10.3.66
+nvidia-cuda-nvrtc-cu11==11.7.99
+nvidia-cuda-runtime-cu11==11.7.99
+nvidia-cudnn-cu11==8.5.0.96
+omegaconf==2.3.0
+packaging==24.1
+pillow==10.4.0
+pip==24.2
+platformdirs==4.2.2
+plotly==5.24.0
+POT==0.9.6.post1
+protobuf==5.28.0
+psutil==6.0.0
+pyparsing==3.1.4
+python-dateutil==2.9.0.post0
+PyYAML==6.0.2
+regex==2024.9.11
+requests==2.32.3
+safetensors==0.4.5
+scikit-learn==1.5.1
+scipy==1.13.1
+sentry-sdk==2.13.0
+setproctitle==1.3.3
+setuptools==72.1.0
+six==1.16.0
+smmap==5.0.1
+tenacity==9.0.0
+threadpoolctl==3.5.0
+torch==1.13.0
+torchvision==0.14.0
+tqdm==4.66.5
+typing_extensions==4.12.2
+urllib3==2.2.2
+wandb==0.17.8
+wheel==0.43.0
+zipp==3.20.1
